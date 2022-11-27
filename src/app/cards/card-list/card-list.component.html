@@ -1,0 +1,46 @@
+<form [formGroup]="profileForm">
+
+    <label for="first-name">title: </label>
+    <input id="first-name" type="text" formControlName="title">
+  
+    <label for="last-name">Price: </label>
+    <input id="last-name" type="text" formControlName="price">
+
+    <label for="last-name">description: </label>
+    <input id="last-name" type="text" formControlName="description">
+
+    <label for="last-name">image: </label>
+    <input id="last-name" type="file"  (ngModelChange)=" attachFile($event)" formControlName="image">
+
+    <label for="last-name">category: </label>
+    <input id="last-name" type="text" formControlName="category">
+
+    
+    
+  </form>
+  <button (click)="onSave()">Add</button>
+
+<h1>new product</h1>
+<div *ngIf="productlist !==undefined">
+<div class="header-styles">
+  <mat-card class="example-card">
+      <img mat-card-image src="{{productlist.image}}" alt="productslist" class="product-image-style" >
+      <mat-card-content class="card-body-style">
+        <h3>{{productlist.title}}</h3>
+        <h2>{{productlist.category}}</h2>
+        <h2>{{productlist.price}}</h2>
+       
+      </mat-card-content>
+      <section>
+          
+            
+          
+        </section>
+    </mat-card>
+    </div>
+    </div>
+  {{cartitems.title}}
+    
+        
+    
+

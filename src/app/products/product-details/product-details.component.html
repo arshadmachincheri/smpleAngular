@@ -1,0 +1,24 @@
+<div class="header-styles">
+    <mat-card class="example-card">
+        <img mat-card-image src="{{productdetails.image}}" alt="productslist" class="product-image-style">
+        <mat-card-content class="card-body-style">
+          <h3>{{productdetails.title}}</h3>
+          <h2>{{productdetails.category}}</h2>
+          <h2>₹{{productdetails.price}}</h2>
+         
+        </mat-card-content>
+        <section>
+           <button (click)="btnclcik(productdetails)">add to cart</button>
+              <button mat-button color="accent" class="back-btn-style" ><a [routerLink]="['/products']" style="text-decoration:none ;"> Back to Home</a></button>
+            
+          </section>
+      </mat-card>
+      </div>
+    
+      <div class="cart-style">
+      <div *ngFor="let tit of card" >
+        <h3>{{tit.title}}</h3>
+        <img src="{{tit.image}}" style="width: 100px;"/>
+        
+      </div>
+      </div>
